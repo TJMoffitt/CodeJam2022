@@ -70,62 +70,62 @@ def main_function(inp_one,inp_two = 0, inp_three = 0, inp_four = 0):
 ##    pass
 
 
-def functiontest(inputstring):
-    possibles = []
-    inputlength = len(inputstring)
-    for x in range(0,2**inputlength):
-        tooadd = ''
-        binaryswitch = "{0:b}".format(x).ljust(inputlength,'0')
-        for index_a, letter in enumerate(inputstring):
-            if binaryswitch[index_a] == '1':
-                tooadd += letter
-            tooadd += letter
-        possibles.append(tooadd)
-    possibles.sort()
-    return possibles[0]
-        
-def randomstring(x):
-    returnstring = ''
-    for x in range(0,x):
-        returnstring += (random.choice(string.ascii_letters.upper()))
-    return returnstring
-while True:
-    stringtofind  = randomstring(6)
-    functiona = main_function(stringtofind)
-    functionb = functiontest(stringtofind)
-    if functiona != functionb:
-        if functiona > functionb:
-            print(stringtofind)
-            print("should be smaller: " + main_function(stringtofind))
-            print("shoudl be larger:  " + functiontest(stringtofind))
-            break
-        
+##def functiontest(inputstring):
+##    possibles = []
+##    inputlength = len(inputstring)
+##    for x in range(0,2**inputlength):
+##        tooadd = ''
+##        binaryswitch = "{0:b}".format(x).ljust(inputlength,'0')
+##        for index_a, letter in enumerate(inputstring):
+##            if binaryswitch[index_a] == '1':
+##                tooadd += letter
+##            tooadd += letter
+##        possibles.append(tooadd)
+##    possibles.sort()
+##    return possibles[0]
+##        
+##def randomstring(x):
+##    returnstring = ''
+##    for x in range(0,x):
+##        returnstring += (random.choice(string.ascii_letters.upper()))
+##    return returnstring
+##while True:
+##    stringtofind  = randomstring(6)
+##    functiona = main_function(stringtofind)
+##    functionb = functiontest(stringtofind)
+##    if functiona != functionb:
+##        if functiona > functionb:
+##            print(stringtofind)
+##            print("should be smaller: " + main_function(stringtofind))
+##            print("shoudl be larger:  " + functiontest(stringtofind))
+##            break
+##        
 
 
-##def main():
-##    nocases = int(input())
-##    for x in range(1,nocases+1):
-##        inp_one = input().upper()
-####        inp_two = [int(x) for x in input().split(' ')]
-####        inp_two = int(input())        
-####        inp_two = {}
-####        for xtwo in range(0,inp_one):
-####            inp_two_key, inp_two_num = input().split(' ')
-####            inp_two[int(inp_two_key)] = int(inp_two_num)
-####            if int(inp_two_key) in inp_two:
-####                inp_two[int(inp_two_key)] += int(inp_two_num)
-####            else:
-####               inp_two[int(inp_two_key)] = int(inp_two_num) 
-##                    
-####        inp_two = []
-####        for xtwo in range(0,inp_one):
-####            inp_two_key, inp_two_num = input().split(' ')
-####            inp_two.append([int(inp_two_key),int(inp_two_num)]) 
-##
-##        print(f'Case #{x}: ' + str(main_function(inp_one)))
-##    
-##
-##main()
+def main():
+    nocases = int(input())
+    for x in range(1,nocases+1):
+        inp_one = input().upper()
+##        inp_two = [int(x) for x in input().split(' ')]
+##        inp_two = int(input())        
+##        inp_two = {}
+##        for xtwo in range(0,inp_one):
+##            inp_two_key, inp_two_num = input().split(' ')
+##            inp_two[int(inp_two_key)] = int(inp_two_num)
+##            if int(inp_two_key) in inp_two:
+##                inp_two[int(inp_two_key)] += int(inp_two_num)
+##            else:
+##               inp_two[int(inp_two_key)] = int(inp_two_num) 
+                    
+##        inp_two = []
+##        for xtwo in range(0,inp_one):
+##            inp_two_key, inp_two_num = input().split(' ')
+##            inp_two.append([int(inp_two_key),int(inp_two_num)]) 
+
+        print(f'Case #{x}: ' + str(main_function(inp_one)))
+    
+
+main()
 ##
 ####val = [('first', 3, 9), ('second', 4, 6), ('third', 2, 3)]
 ####val.sort(key = lambda x: x[2], reverse=False)
